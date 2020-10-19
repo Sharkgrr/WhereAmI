@@ -24,6 +24,6 @@ public class NovoUsuarioActivity extends Activity {
     public void criarNovoUsuario (View view) {
         String login = loginNovoUsuarioEditText.getEditableText().toString();
         String senha = senhaNovoUsuarioEditText.getEditableText().toString();
-        
+        auth.createUserWithEmailAndPassword(login, senha);
     }
 }
