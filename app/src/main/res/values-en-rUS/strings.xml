@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">fire</string>
+    <string name="dica_login">Write your login :S </string>
+    <string name="dica_senha">Write your password :)</string>
+    <string name="quero_me_cadastrar">Sign Up</string>
+    <string name="data_nome">In %s, %s says:</string>
+    <string name="digite_sua_mensagem">What are you thinking about?</string>
+</resources>
