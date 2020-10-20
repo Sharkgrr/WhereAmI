@@ -13,7 +13,7 @@ public class NovoUsuarioActivity extends Activity {
     private EditText senhaNovoUsuarioEditText;
     private FirebaseAuth auth;
 
-    protected void onCrate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_usuario);
         loginNovoUsuarioEditText = findViewById(R.id.loginNovoUsuarioEditText);
@@ -24,6 +24,6 @@ public class NovoUsuarioActivity extends Activity {
     public void criarNovoUsuario (View view) {
         String login = loginNovoUsuarioEditText.getEditableText().toString();
         String senha = senhaNovoUsuarioEditText.getEditableText().toString();
-        auth.createUserWithEmailAndPassword(login, senha);
+        auth.createUserWithEmailAndPassword(login, senha).addOnSuccessListener();
     }
 }
