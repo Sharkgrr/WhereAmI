@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp"
+    tools:context=".NovoLugar">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/registrar_novo_local"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp"></TextView>
+
+    <GridLayout
+        android:id="@+id/formView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:columnCount="1"
+        android:rowCount="10">
+
+        <TextView
+            android:id="@+id/dataInclusao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Data"
+            android:padding="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/red"
+            android:textSize="20sp"></TextView>
+
+        <EditText
+            android:id="@+id/nomeLugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="10dp"
+            android:hint="Nome do local"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20dp"></EditText>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:layout_gravity="fill_horizontal"
+            android:hint=""
+            android:padding="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20dp"></TextView>
+
+
+        <EditText
+            android:id="@+id/descricaoInclusao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:hint="Descrição:"
+            android:padding="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20dp"></EditText>
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/Thunder"
+            android:padding="16dp"
+            android:text="Gerar Localização" />
+
+        <Button
+            android:id="@+id/publicarNaMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/Thunder"
+            android:padding="16dp"
+            android:text="CREATE"
+            android:onClick="save"/>
+
+
+    </GridLayout>
+
+
+</androidx.cardview.widget.CardView>

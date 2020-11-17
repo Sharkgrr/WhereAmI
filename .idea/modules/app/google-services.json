@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "820685311283-s8bsat54o4601fc60chhtmvbt7g45biu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.usjt.fire",
+            "certificate_hash": "30d25450dd740aafe589f591165f44871a0e187f"
+          }
+        },
+        {
           "client_id": "820685311283-905d976suc767mdnd1hin8oevgk8q1te.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

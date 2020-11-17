@@ -1,8 +1,32 @@
 <resources>
     <string name="app_name">fire</string>
-    <string name="dica_login">Digite seu login</string>
-    <string name="dica_senha">Digite sua senha</string>
+    <string name="dica_email">Digite seu email...</string>
+    <string name="dica_senha">Digite sua senha...</string>
     <string name="quero_me_cadastrar">Quero me cadastrar</string>
+    <string name="login">Login</string>
+    <string name="salvar">Salvar</string>
+    <string name="digite_o_local">Digite seu local...</string>
     <string name="data_nome">Em %s, %s diz:</string>
-    <string name="digite_sua_mensagem">Digite sua mensagem:</string>
+    <string name="enviar">enviar</string>
+    <string name="longitude_43_9542">Longitude: -43.9542</string>
+    <string name="belo_horizonte_minas_gerais_brasil">Belo Horizonte, Minas Gerais, Brasil</string>
+    <string name="descri_o_lugar_de_pombo">Descrição: Lugar de pombo.</string>
+    <string name="longitude_46_792004">Longitude: -46.792004</string>
+    <string name="latitude_23_532881">Latitude: -23.532881</string>
+    <string name="data_29_10_2020">Data: 29/10/2020</string>
+    <string name="osasco_s_o_paulo_brasil">Osasco, São Paulo, Brasil</string>
+    <string name="data_01_11_2020">Data: 01/11/2020</string>
+    <string name="latitude_19_8157">Latitude: -19.8157</string>
+    <string name="adicione_um_novo_lugar">Adicione um novo lugar</string>
+    <string name="descricao_queijo_bao">Descrição: Queijo bão.</string>
+    <string name="rio_de_janeiro_brasil">Rio de Janeiro, Brasil</string>
+    <string name="data_05_11_2020">Data: 05/11/2020</string>
+    <string name="latitude_22_9035">Latitude: -22.9035</string>
+    <string name="longitude_43_2096">Longitude: -43.2096</string>
+    <string name="descri_o_nico_lugar_onde_voc_ganha_bala_de_gra_a">Descrição: Único lugar onde você ganha bala de graça.</string>
+    <string name="data">Data:</string>
+    <string name="criarlocal">Criar</string>
+    <string name="registrar_novo_local"> - Registrar Novo Local</string>
+    <string name="local"> Local </string>
+
 </resources>

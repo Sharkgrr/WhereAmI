@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+
+        />
+
+        <Button
+            android:id="@+id/InclusaoNovoLugar"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/Thunder"
+            android:hint="@string/adicione_um_novo_lugar"
+            android:onClick="redirecionarNovoLugar"
+            android:padding="12dp"
+            android:textColor="@color/cerulean" />
+
+    </LinearLayout>
+

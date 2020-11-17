@@ -8,6 +8,24 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Marcador de Lugares"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_marginTop="75dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="16dp">
+
+    </TextView>
+
     <EditText
         android:id="@+id/loginEditText"
         android:layout_width="match_parent"
@@ -15,7 +33,7 @@
         android:padding="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:hint="@string/dica_login"
+        android:hint="@string/dica_email"
         android:gravity="left"
         />
 
@@ -38,8 +56,9 @@
         android:padding="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:text="@android:string/ok"
-        android:background="@android:color/darker_gray"/>
+        android:text="@string/login"
+        android:background="@color/Thunder"
+        android:cursorVisible="false"/>
 
 
     <Button
@@ -47,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/Thunder"
         android:onClick="irParaCadastro"
         android:padding="16dp"
         android:text="@string/quero_me_cadastrar" />
