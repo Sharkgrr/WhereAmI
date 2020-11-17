@@ -17,12 +17,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
@@ -39,6 +40,7 @@ public class NovoLugar extends Activity {
     EditText edDescricao;
     Button btCreate;
     private FirebaseAuth auth;
+    FirebaseOptions options;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -67,6 +69,7 @@ public class NovoLugar extends Activity {
             }
         } );
 
+
         TextView textView;
         textView = findViewById( R.id.dataInclusao );
 
@@ -85,36 +88,69 @@ public class NovoLugar extends Activity {
     public void onPointerCaptureChanged(boolean hasCapture) {
     }
 
-    public void save(View view) {
+    public void save(View view) throws FileNotFoundException {
 
         String data = txtData.getText().toString();
         String nome = edNome.getText().toString();
         String local = txtLocal.getText().toString();
         String descricao = edDescricao.getText().toString();
 
-        Map<String, Object> note = new HashMap<>();
-        note.put( KEY_DATA, data );
-        note.put( KEY_NOME, nome );
-        note.put( KEY_LOCAL, local );
-        note.put( KEY_DESCRICAO, descricao );
+        Map<String, Object> locais = new HashMap<>();
+        locais.put( KEY_DATA, data );
+        locais.put( KEY_NOME, nome );
+        locais.put( KEY_LOCAL, local );
+        locais.put( KEY_DESCRICAO, descricao );
 
+//        FileInputStream serviceAccount = null;
+//
+//        try {
+//            serviceAccount = new FileInputStream("path/to/serviceAccountKey.json");
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//        try {
+//            FirebaseOptions.Builder builder = new FirebaseOptions.Builder();
+//            builder.setCredentials(GoogleCredentials.fromStream( serviceAccount ) ).setDatabaseUrl( "https://fire-d64a6.firebaseio.com" );
+//            options = builder
+//                    .build();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        FirebaseApp.initializeApp(options);
 
-        db.collection("Locais")
-                .add( note )
-                .addOnSuccessListener( new OnSuccessListener<DocumentReference>() {
+        db.collection("Locais").document("Endereços")
+                .set(locais)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d( TAG, "DocumentSnapshot added with ID: " + documentReference.getId() );
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully written!");
                     }
-                } )
-                .addOnFailureListener( new OnFailureListener() {
+                })
+                .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.w( TAG, "Error adding document", e );
+                        Log.w(TAG, "Error writing document", e);
                     }
-                } );
+                });
 
-        db.collection( "note" )
+//        db.collection("Locais")
+//                .add( locais )
+//                .addOnSuccessListener( new OnSuccessListener<DocumentReference>() {
+//                    @Override
+//                    public void onSuccess(DocumentReference documentReference) {
+//                        Log.d( TAG, "DocumentSnapshot added with ID: " + documentReference.getId() );
+//                    }
+//                } )
+//                .addOnFailureListener( new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Log.w( TAG, "Error adding document", e );
+//                    }
+//                });
+
+        db.collection( "Locais" )
                 .get()
                 .addOnCompleteListener( new OnCompleteListener<QuerySnapshot>() {
                     @Override

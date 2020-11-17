@@ -39,7 +39,7 @@ public class GeoLocation {
                     if (result != null) {
                         message.what = 1;
                         Bundle bundle = new Bundle();
-                        result = "Endereço: " + locationAddress + "." + "\n\nLatitude e Longitude:\n" + result;
+                        result = locationAddress + "." + "\n\nLatitude e Longitude:\n" + result;
                         bundle.putString("address", result);
                         message.setData(bundle);
                     }
