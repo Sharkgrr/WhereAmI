@@ -14,15 +14,26 @@
         android:id="@+id/textViewLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
-        android:text="Marcador de Lugares"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="WHERE AM I?"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40dp"
-        android:layout_marginTop="75dp"
-        tools:ignore="MissingConstraints"
+        android:layout_marginTop="75dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView2Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textColor="@color/redneg"
+        android:textSize="20dp"
         tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="16dp">
+
 
     </TextView>
 
@@ -41,34 +52,37 @@
         android:id="@+id/senhaEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/dica_senha"
         android:inputType="textPassword"
-        android:layout_gravity="left"
-        />
+        android:padding="16dp" />
 
     <Button
         android:onClick="fazerLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginTop="45dp"
         android:layout_marginHorizontal="20dp"
+        android:textSize="15dp"
         android:text="@string/login"
-        android:background="@color/Thunder"
-        android:cursorVisible="false"/>
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corner_field"
+        />
 
-
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/Thunder"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-black"
         android:onClick="irParaCadastro"
-        android:padding="16dp"
-        android:text="@string/quero_me_cadastrar" />
+        android:text="@string/quero_me_cadastrar"
+        android:textAlignment="center"
+        android:textColor="@color/redneg"
+        android:textSize="15dp" />
 
 </LinearLayout>

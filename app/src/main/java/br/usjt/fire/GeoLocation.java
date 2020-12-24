@@ -17,14 +17,14 @@ public class GeoLocation {
         Thread thread = new Thread(){
             @java.lang.Override
             public void run(){
-                Geocoder geocoder = new Geocoder( context, Locale.getDefault());
+                Geocoder geocoder = new Geocoder( context.getApplicationContext(), Locale.getDefault());
                 String result = null;
                 try {
                     List addressList = geocoder.getFromLocationName(locationAddress, 1);
                     if (addressList != null && addressList.size() > 0) {
                         Address address = (Address) addressList.get(0);
                         StringBuilder stringBuilder = new StringBuilder();
-                        stringBuilder.append( address.getLatitude()).append( "\n" );
+                        stringBuilder.append( address.getLatitude()).append( ",\n" );
                         stringBuilder.append( address.getLongitude()).append( "\n" );
                         result = stringBuilder.toString();
                     }
@@ -39,7 +39,7 @@ public class GeoLocation {
                     if (result != null) {
                         message.what = 1;
                         Bundle bundle = new Bundle();
-                        result = locationAddress + "." + "\n\nLatitude e Longitude:\n" + result;
+                        result =  "Latitude e Longitude:\n" + result;
                         bundle.putString("address", result);
                         message.setData(bundle);
                     }

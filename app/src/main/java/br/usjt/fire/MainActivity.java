@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
         auth.signInWithEmailAndPassword(login, senha)
                 .addOnSuccessListener((result) -> {
                     Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, Dashboard.class));
                     finish();
                 })
                 .addOnFailureListener((error) -> {
                     Toast.makeText(this, "Failure!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(this, MainActivity.class));
                 });
-        startActivity(new Intent(this, Dashboard.class));
     }
 
     public void onLocationChanged(Location location){

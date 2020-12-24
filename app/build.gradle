@@ -32,9 +32,10 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    implementation "com.orhanobut:hawk:2.0.1"
     implementation 'com.google.firebase:firebase-core:9.6.1'
     implementation 'com.firebaseui:firebase-ui-auth:7.0.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
 
     // Room components
     implementation "androidx.room:room-runtime:$rootProject.roomVersion"
@@ -47,6 +48,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.4'
     annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+    implementation 'com.firebaseui:firebase-ui-firestore:7.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
 // Lifecycle components
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.archLifecycleVersion"
